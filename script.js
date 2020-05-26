@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
   // please note that this variable contains a UNIX timestamp with millisecond
   // precision, not a Date object
-  const COUNTDOWN_DATE = Date.UTC(2020, 4, 16, 17, 0, 0);
+  const COUNTDOWN_DATE = Date.UTC(2020, 6, 23, 0, 0, 0);
 
   let digitsElements = {};
   ['days', 'hours', 'minutes', 'seconds'].forEach((id) => {
