@@ -1,8 +1,9 @@
 window.addEventListener('load', function() {
   let current_date = new Date();
-  let day = current_date.getUTCDay();
+  let day = current_date.getUTCDate();
   let month = current_date.getUTCMonth();
-  let year = (month > 5 || (month == 5 && day > 23)) ? current_date.getUTCFullYear()++ : current_date.getUTCFullYear();
+  let year = (month > 5 || (month == 5 && day > 23)) ? current_date.getUTCFullYear() + 1 : current_date.getUTCFullYear();
+  console.log(year);
   const COUNTDOWN_DATE = Date.UTC(year, 5, 23, 0, 0, 0);
 
   let digitsElements = {};
