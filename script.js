@@ -1,7 +1,9 @@
 window.addEventListener('load', function() {
-  // please note that this variable contains a UNIX timestamp with millisecond
-  // precision, not a Date object
-  const COUNTDOWN_DATE = Date.UTC(2020, 5, 23, 0, 0, 0);
+  let current_date = new Date();
+  let day = current_date.getUTCDay();
+  let month = current_date.getUTCMonth();
+  let year = (month > 5 || (month == 5 && day > 23)) ? current_date.getUTCFullYear()++ : current_date.getUTCFullYear();
+  const COUNTDOWN_DATE = Date.UTC(year, 5, 23, 0, 0, 0);
 
   let digitsElements = {};
   ['days', 'hours', 'minutes', 'seconds'].forEach((id) => {
